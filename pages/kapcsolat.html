@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link id="accessibility" rel="stylesheet" href="../styles/accessibility.css" disabled>
+    <title>Japán autók weboldal - kapcsolat</title>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUiYlBL8p3EcQjFR3NtdGaNZSSKM3GECs&callback=console.debug&libraries=maps,marker&v=beta">
+    </script>
+</head>
+<body>
+    
+    <div class="back-image">
+        <h1>Japán autók</h1>
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+        var backImage = document.querySelector('.back-image');
+        backImage.classList.add('loaded');
+        });
+        function accessibilityToggle() {
+            var ac = document.getElementById("accessibility");
+            if (ac.disabled === true) {
+                ac.disabled = false;
+            }
+            else {
+                ac.disabled = true;
+            }
+        }
+    </script>
+    <nav>
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="autok.html">Autók</a></li>
+            <li><a href="ajanlasok.html">Ajánlások</a></li>
+            <li><a href="esemenyek.html">Események</a></li>
+            <li><a href="kapcsolat.html">Kapcsolat</a></li>
+        </ul>
+    </nav>
+    <div class="about-us-page">
+        <div class="about-us">
+            <h2>Üdvözöllek a weboldalamon!</h2>
+            <h1>Ujláb Bálint vagyok</h1>
+            <h2>Én vagyok az oldal alkotója és szerzője.
+                Az autók és a motorsport mindig is a szenvedélyem volt.
+                Kicsi korom óta rajongok a gépekért, és az autók világába
+                való mélyebb elmerülés csak megerősítette ezt a szenvedélyt.</h2>
+            <h4>
+                Amikor éppen nem az autók világába mélyedek,
+                a szabadidőmet szeretem utazásra és a fotózásra szentelni. 
+                Remélem, hogy az oldalamon található tartalmak érdekesek és inspirálóak lesznek számodra. 
+                Ha kérdéseid vagy észrevételeid vannak, ne habozz kapcsolatba lépni velem. 
+                Örömmel várom visszajelzéseidet és az oldalra látogatásodat!
+                Köszönöm, hogy itt vagy, és együtt fedezzük fel a japán autók és a vezetés világát!
+            </h4>
+        </div>
+        <div class="gmap">
+            <gmp-map center="47.2324333190918,16.611957550048828" zoom="14" map-id="Szombathely">
+                <gmp-advanced-marker position="47.2324333190918,16.611957550048828" title="My location">
+                </gmp-advanced-marker>
+            </gmp-map>
+        </div>
+        <div class="form-div">
+            <h1 class="hozzarak">Felkeltette az érdeklődésed az oldal? Válaszolj pár kérdésemre!</h2>
+                <form action="mailto:ujlabbalint01@gmail.com" method="post" enctype="text/plain">
+                    <ul>
+                        <li>
+                            <fieldset>
+                                <label>Van japán autód?</label>
+                                <label for="igen">
+                                    <input type="radio" id="igen" name="japan auto" />Igen
+                                </label>
+                                <label for="nem">
+                                    <input type="radio" id="nem" name="japan auto" />Nem
+                                </label>
+                            </fieldset>
+                        </li>
+                        <li>
+                            <label for="tipus">Milyen?</label>
+                            <select id="tipus" name="tipusok" class="field" disabled>
+                                <option value="Nissan">Nissan</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Honda">Honda</option>
+                                <option value="Mitsubishi">Mitsubishi</option>
+                                <option value="Suzuki">Suzuki</option>
+                                <option value="Subaru">Subaru</option>
+                                <option value="Mazda">Mazda</option>
+                                <option value="Isuzu">Isuzu</option>
+                                <option value="Daihatsu">Daihatsu</option>
+                                <option value="Lexus">Lexus</option>
+                                <option value="Infiniti">Infiniti</option>
+                                <option value="Egyeb">Egyéb</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="teljesnev">Név<span class="required">*</span></label>
+                            <input type="text" id="teljesnev" name="Név: " class="field" maxlength="50"
+                                placeholder="Példa Matyi" />
+                        </li>
+                        <li>
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="Email: " class="field" maxlength="40"
+                                placeholder="matyi@pelda.hu" />
+                        </li>
+                        
+                        <li>
+                            <label for="uzenet">Üzenet<span class="required">*</span></label>
+                            <textarea id="uzenet" name="Üzenet: " class="field fieldtext" maxlength="200"
+                                placeholder="Ide írhatsz bármit az oldal témájával kapcsolatban"></textarea>
+                        </li>
+                        <li>
+                            <label for="erdekesseg">Szeretnék visszajelzést:
+                                <input id="visszajelzés" type="checkbox" name="visszajelzés: " checked />
+                            </label>
+                        <li>
+                        <li>
+                            <input type="submit" value="ELKÜLD" />
+                            <input type="reset" value="RESET" />
+                        </li>
+                    </ul>
+                </form>
+        </div>
+    </div>
+    <script>
+        var igen = document.getElementById('igen');
+        var nem  = document.getElementById('nem')
+        var tipus = document.getElementById('tipus');
+        igen.addEventListener('change', function() {
+            if (igen.checked) {
+                tipus.removeAttribute('disabled');
+            }
+        });
+
+        nem.addEventListener('change', function() {
+            if (nem.checked) {
+                tipus.setAttribute('disabled', 'disabled');
+            }
+        });
+
+        </script>
+    <footer>
+        <div class="flex-container">
+        <a class="footer-a" href="https://www.facebook.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.448 48.310001"><path fill="currentColor" d="M22.448 15.643h-7.645v-5.014c0-1.883 1.248-2.322 2.127-2.322h5.395V.029L14.895 0C6.647 0 4.77 6.174 4.77 10.125v5.518H0v8.53h4.77V48.31h10.033V24.173h6.77z"></path></svg>
+            <span>&nbsp</span>
+        </a>
+        <a class="footer-a" href="https://twitter.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.263 40.034"><path fill="currentColor" d="M49.263 4.739a20.11 20.11 0 0 1-5.805 1.591A10.125 10.125 0 0 0 47.902.738a20.232 20.232 0 0 1-6.418 2.454A10.093 10.093 0 0 0 34.107 0c-5.581 0-10.106 4.525-10.106 10.107 0 .791.089 1.562.262 2.303-8.4-.422-15.848-4.445-20.833-10.56a10.055 10.055 0 0 0-1.368 5.082c0 3.506 1.784 6.6 4.496 8.412a10.078 10.078 0 0 1-4.578-1.265l-.001.128c0 4.896 3.484 8.98 8.108 9.91a10.162 10.162 0 0 1-4.565.172c1.287 4.015 5.019 6.938 9.441 7.019a20.276 20.276 0 0 1-12.552 4.327c-.815 0-1.62-.048-2.411-.142a28.6 28.6 0 0 0 15.493 4.541c18.591 0 28.756-15.4 28.756-28.756 0-.438-.009-.875-.028-1.309a20.47 20.47 0 0 0 5.042-5.23z"></path></svg>
+            <span>&nbsp</span>
+        </a>
+        <a class="footer-a" href="https://www.youtube.com" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.34845 26.972168"><path d="M37.966 5.819s-.375-2.643-1.525-3.807C34.983.485 33.348.478 32.599.388 27.233 0 19.183 0 19.183 0h-.017S11.116 0 5.75.388C5 .478 3.366.485 1.908 2.012.758 3.176.383 5.819.383 5.819S0 8.922 0 12.025v2.91c0 3.103.383 6.206.383 6.206s.375 2.643 1.525 3.807c1.458 1.527 3.374 1.478 4.228 1.639 3.068.294 13.038.385 13.038.385s8.059-.012 13.425-.4c.75-.09 2.384-.097 3.842-1.624 1.15-1.164 1.525-3.807 1.525-3.807s.382-3.103.382-6.206v-2.91c0-3.103-.382-6.206-.382-6.206zM15.216 18.46l-.002-10.775 10.361 5.406z" fill="currentColor"></path></svg>
+            <span>&nbsp</span>
+        </a>
+        </div>
+        <div class="help">
+            <p class="footer-text"> Az oldalon olvasható hírek és cikkek a szerző tulajdonai, másolásuk forrásmegjelöléssel engedélyezett. ©2023</p>
+            <button onclick="accessibilityToggle()">
+                <img src="../pictures/accessibility2.png" alt="Akadálymentesség ikon" class="accessibility">
+            </button>
+        </div>
+    </footer>
+</body>
+</html>
