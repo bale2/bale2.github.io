@@ -216,7 +216,7 @@ svg {
     width: 3vw; 
     height: 3vw; 
     color: rgb(0, 0, 0);
-    transform: scale(150%) ;
+    transform: scale(1.5);
    }
 
 path {
@@ -237,7 +237,6 @@ path {
     height: 0px;
     color: rgb(0, 0, 0);
     background-color: transparent;
-    border: #000 2px soli;
   }
 .footer-a {
     padding: 10px 0px 0px 0px;
@@ -439,7 +438,6 @@ caption {
     color: #fff;
 }
 .videos {
-    size: 80vw;
     height: 45vw;
     width: 80vw;
 }

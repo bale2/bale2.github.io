@@ -102,7 +102,7 @@ nav li:hover {
 .content {
     display: inline-block;
     background-color: #3c6e71;
-    padding: 20px 5em;
+    padding: 20px 2em;
     margin: 10px;
     max-width:50vw;
     flex: 1;
@@ -203,7 +203,6 @@ svg {
     height: 0px;
     color: rgb(147, 233, 190);
     background-color: transparent;
-    border: #000 2px soli;
   }
 .footer-a {
     padding: 10px 0px 0px 0px;
@@ -361,9 +360,8 @@ table,th,td {
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1.5vw;
+    padding: 2px;
+    font-size: 1.2em;
 
 }
 table {
@@ -388,11 +386,12 @@ table th:first-child, td:first-child {
 caption {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: large;
+    color: white;
 }
 .videos {
-    size: 80vw;
     height: 45vw;
     width: 80vw;
+    border: 0;
 }
 .shows-iframe {
     text-align: center; 
